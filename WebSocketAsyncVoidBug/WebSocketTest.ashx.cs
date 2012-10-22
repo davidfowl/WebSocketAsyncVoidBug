@@ -19,7 +19,9 @@ namespace WebApplication14
                 }
                 catch(Exception ex)
                 {
-                    socketContext.WebSocket.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes(ex.Message)), WebSocketMessageType.Text, endOfMessage: true, cancellationToken: CancellationToken.None);
+                    // The exception is thrown here, we're just sending the message back to the socket
+                    // so we can disply something in the client.
+                    return socketContext.WebSocket.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes(ex.Message)), WebSocketMessageType.Text, endOfMessage: true, cancellationToken: CancellationToken.None);
                 }
 
                 return Task.FromResult(0);
