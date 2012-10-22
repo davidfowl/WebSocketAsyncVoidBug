@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        var ws = new WebSocket('ws://localhost:15964/WebSocketTest.ashx');
+        ws.onmessage = function (data) {
+            alert(data.data);
+        };
+
+        ws.onclose = function () {
+        };
+
+    </script>
+</head>
+<body>
+    <div id="msg"></div>
+</body>
+</html>
