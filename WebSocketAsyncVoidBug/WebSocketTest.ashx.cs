@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
@@ -9,9 +7,6 @@ using System.Web;
 
 namespace WebApplication14
 {
-    /// <summary>
-    /// Summary description for WebSocketTest
-    /// </summary>
     public class WebSocketTest : HttpTaskAsyncHandler
     {
         public override Task ProcessRequestAsync(HttpContext context)
